@@ -30,7 +30,8 @@ minikube addons enable ingress
 # Deploy keycloak
 
 ```shell
-kubectl apply -k keycloak.yaml
+kubectl apply -k keycloak-namespace.yaml
+kubectl apply -k keycloak-deployment.yaml
 ```
 
 # Start minikube tunneling
