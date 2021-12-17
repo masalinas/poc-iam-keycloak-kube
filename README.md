@@ -1,11 +1,6 @@
 # Description
 PoC Deploy Keycloak on Minikube
 
-# Install on docker
-```shell
-docker run -e KEYCLOAK_USER=<USERNAME> -e KEYCLOAK_PASSWORD=<PASSWORD> jboss/keycloak
-```
-
 # Install and start Minikube
 
 ```shell
