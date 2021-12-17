@@ -19,7 +19,7 @@ sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 kubectl version --client
 ```
 
-# Add minikue addons
+# Add minikude addons
 We must enable ingress addon on minikube
 
 ```shell
