@@ -1,7 +1,7 @@
 # Description
 PoC Deploy Keycloak on Minikube
 
-# Install and start Minikube
+## Install and start Minikube
 
 ```shell
 curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
@@ -10,7 +10,7 @@ sudo install minikube-linux-amd64 /usr/local/bin/minikube
 minikube start
 ```
 
-# Install Kubernetes CLI
+## Install Kubernetes CLI
 
 ```shell
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
@@ -19,7 +19,7 @@ sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 kubectl version --client
 ```
 
-# Add minikude addons
+## Add minikude addons
 We must enable ingress addon on minikube
 
 ```shell
@@ -27,14 +27,14 @@ minikube addons list
 minikube addons enable ingress
 ```
 
-# Deploy keycloak
+## Deploy Keycloak
 
 ```shell
 kubectl apply -k keycloak-namespace.yaml
 kubectl apply -k keycloak-deployment.yaml
 ```
 
-# Start minikube tunneling
+## Start minikube tunneling
 Start tunneling service to asign ip for the LoadBalancer keycloak service installed
 
 ```shell
@@ -43,7 +43,7 @@ sudo minikube tunnel
 
 ![Keycloak Service](captures/Keycloak_service.png "Keycloak Service")
 
-# access keycloak UI
+## Access keycloak UI
 By default keycloak create ad admin account **admin/admin** for the keycloak service. Get the Ip from the Keycloak service previously capture. For example:
 
 ```shell
